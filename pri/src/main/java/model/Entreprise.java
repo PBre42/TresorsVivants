@@ -10,7 +10,13 @@ public class Entreprise {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
+	/* Nom de l'entreprise*/
 	@Column(name="nom")
 	private String nom;
+	
+	/* Dirigeant(s) de l'entreprise*/
+	@OneToMany//(mappedBy="personne")?
+	@Column(name="dirigeant")
+	private Personne dirigeant;
 	
 }
