@@ -7,6 +7,8 @@ import javax.persistence.*;
 @Table(name="personne")
 public class Personne {
 
+	/* Attributs */
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
@@ -49,4 +51,59 @@ public class Personne {
 	
 	/* Mot de passe de la personne */
 	//private string password; //A encrypter
+
+	
+	/* Méthodes */
+	
+	public Personne(){
+		
+	} // default constructor
+	
+	
+	public Personne(String nom, String prenom, String equipe, String entreprise) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.equipe = equipe;
+		this.entreprise = entreprise;
+	}
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getEquipe() {
+        return equipe;
+    }
+
+    public void setEquipe(String service) {
+        this.equipe = service;
+    }
+
+    public String getEntreprise() {
+        return entreprise;
+    }
+
+    public void setEntreprise(String entreprise) {
+        this.entreprise = entreprise;
+    }
 }
